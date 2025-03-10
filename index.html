@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="./main.js" defer></script>
+    <title>Currency converter</title>
+</head>
+<body>
+    <main class="main">
+        <form action="./main.js" method="post" class="form">
+            <input type="text" name="currency-from" id="input-currency-from">
+            <select name="select-currency" id="select-from" class="select" required>
+                <option class="option" value="BYN" selected>BYN</option>
+                <option class="option" value="USD">USD</option>
+                <option class="option" value="EUR">EUR</option>
+                <option class="option" value="CNY">CNY</option>
+                <option class="option" value="RUB">RUB</option>
+            </select>
+            <input type="text" name="currency-to" id="input-currency-to" value="">
+            <select name="select-currency" id="select-to" class="select" required>
+                <option class="option" value="BYN">BYN</option>
+                <option class="option" value="USD" selected>USD</option>
+                <option class="option" value="EUR">EUR</option>
+                <option class="option" value="CNY">CNY</option>
+                <option class="option" value="RUB">RUB</option>
+            </select>
+        </form>
+    </main>
+    
+</body>
+
+
+</html>
