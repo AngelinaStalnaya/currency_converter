@@ -8,9 +8,11 @@
 .form {
     display: flex;
     gap: 7px;
+    width: fit-content;
     padding: 15px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
+    background-color: rgb(247, 198, 75);
 }
 
 .select-currency {

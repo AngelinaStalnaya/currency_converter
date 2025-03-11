@@ -21,14 +21,14 @@ const convertToBYN = (currency, amount) => {
 export default function returnExchangeSum(amount, currencyFrom, currencyTo) {
   switch (currencyTo) {
     case "BYN":
-      return convertToBYN(currencyFrom, amount);
+      return (convertToBYN(currencyFrom, amount)).toFixed(4);
     case "USD":
-      return convertToBYN(currencyFrom, amount) / USDTOBYN;
+      return (convertToBYN(currencyFrom, amount) / USDTOBYN).toFixed(4);
     case "EUR":
-      return convertToBYN(currencyFrom, amount) / EURTOBYN;
+      return (convertToBYN(currencyFrom, amount) / EURTOBYN).toFixed(4);
     case "CNY":
-      return convertToBYN(currencyFrom, amount) / CNYTOBYN;
+      return (convertToBYN(currencyFrom, amount) / CNYTOBYN).toFixed(4);
     case "RUB":
-      return convertToBYN(currencyFrom, amount) / RUBTOBYN;
+      return (convertToBYN(currencyFrom, amount) / RUBTOBYN).toFixed(4);
   }
 }
