@@ -1,11 +1,7 @@
 import createInputResult from "./inputResult.js";
+import returnExchangeSum from "./exchangeSum.js";
 
 const currencyArray = ["BYN", "USD", "EUR", "CNY", "RUB"];
-
-const returnSum = (currencyAmmount, currencyEquivalent) => {
-  return currencyAmmount * currencyEquivalent;
-};
-
 
 const resultContainer = document.getElementById("currencies-result");
 let selectedCurrency = document.getElementById("select-currency");
@@ -23,3 +19,4 @@ selectedCurrency.addEventListener("change", (e) => {
         resultContainer.appendChild(createInputResult(currency));
     }
 });
+
