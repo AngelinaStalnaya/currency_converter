@@ -19,16 +19,19 @@ for (let currency of currencyArray.filter(
 }
 
 const inputCurrencyFromAmount = document.getElementById("input-currency-from");
-inputCurrencyFromAmount.addEventListener("input", addResultToInputBox);
+inputCurrencyFromAmount.addEventListener("input", (e) => addResultToInputBox(e.target.value));
 
 datepicker.addEventListener("change", (e) => {
   let date = e.target.value;
   if (new Date(date).getTime() > new Date().getTime()) {
     alert("We can`t watch in the future");
     datepicker.valueAsNumber = Date.now();
+    currentExchangeRate = exchangeHistory[0];
+    addResultToInputBox(inputCurrencyFromAmount.value);
   } else {
     let dayIndex = getDataDifference(date);
     currentExchangeRate = exchangeHistory[dayIndex];
+    addResultToInputBox(inputCurrencyFromAmount.value);
   }
 });
 
@@ -53,7 +56,7 @@ function addResultToInputBox(e) {
   const CNYresult = document.getElementById("CNY");
   const RUBresult = document.getElementById("RUB");
 
-  let amount = e.target.value;
+  let amount = e;
 
   if (BYNresult) {
     BYNresult.value = returnExchangeSum(
