@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="./main.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js" type="module" defer></script>
     <title>Currency converter</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="main">
-        <form action="./main.js" method="post" class="form">
-            <input type="text" name="currency-from" id="input-currency-from">
-            <select name="select-currency" id="select-from" class="select" required>
-                <option class="option" value="BYN" selected>BYN</option>
-                <option class="option" value="USD">USD</option>
-                <option class="option" value="EUR">EUR</option>
-                <option class="option" value="CNY">CNY</option>
-                <option class="option" value="RUB">RUB</option>
-            </select>
-            <input type="text" name="currency-to" id="input-currency-to" value="">
-            <select name="select-currency" id="select-to" class="select" required>
-                <option class="option" value="BYN">BYN</option>
-                <option class="option" value="USD" selected>USD</option>
-                <option class="option" value="EUR">EUR</option>
-                <option class="option" value="CNY">CNY</option>
-                <option class="option" value="RUB">RUB</option>
-            </select>
-        </form>
+      <form action="./main.js" method="post" class="form">
+        <div class="currency-from">
+          <input
+            type="number"
+            name="input-currency-from"
+            id="input-currency-from"
+            inputmode="numeric"
+            class="input"
+          />
+          <select id="select-currency" class="select-currency" name="select-currency" required>
+            <option class="option" value="BYN">BYN</option>
+            <option class="option" value="USD">USD</option>
+            <option class="option" value="EUR">EUR</option>
+            <option class="option" value="CNY">CNY</option>
+            <option class="option" value="RUB">RUB</option>
+          </select>
+        </div>
+        <div class="currencies-to" id="currencies-result"></div>
+      </form>
     </main>
-    
-</body>
 
-
+  </body>
 </html>
